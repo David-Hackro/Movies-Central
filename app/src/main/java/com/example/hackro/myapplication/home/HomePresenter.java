@@ -32,7 +32,10 @@ public class HomePresenter {
             @Override
             public void onSuccess(List<CollectionsMovies> collectionList) {
                 view.removeWait();
-                view.getityListSuccess(collectionList);
+                if(collectionList.size()>=6)
+                    view.getityListSuccess(collectionList);
+
+
             }
 
             @Override

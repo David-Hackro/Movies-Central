@@ -70,7 +70,7 @@ public class Service {
 
                     @Override
                     public void onError(Throwable e) {
-                        Log.e("Ha ocurrido un error,",e.getMessage());
+                        callback.onError(new NetworkError(e));
                     }
 
                     @Override

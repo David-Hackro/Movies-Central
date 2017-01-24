@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Movies Central</string>
+
+    <string name="action.order.alphabetically">Ordenar Alfabeticamente</string>
+    <string name="action.order.date">Ordenar Por Fechas</string>
+    <string name="action.order.stars">Ordenar por Estrellas</string>
+    <string name="action.filter.name">Filtrar por Nombre</string>
+    <string name="action.filter.stars">Filtrar por Estrellas</string>
+
+    <string name="action_search_title">find title</string>
+    <string name="action_search_stars">find stars</string>
+
+</resources>

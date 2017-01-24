@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item
+        android:id="@+id/action_order_alphabetically"
+        android:title="@string/action.order.alphabetically"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_order_date"
+        android:title="@string/action.order.date"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+
+    <item
+        android:id="@+id/action_order_stars"
+        android:title="@string/action.order.stars"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+
+    <item
+        android:id="@+id/action_buscar"
+        android:title="@string/action.order.date"
+        android:icon="@android:drawable/ic_menu_search"
+        android:orderInCategory="100"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+
+    <item
+        android:id="@+id/action_find_stars"
+        android:title="@string/action.order.date"
+        android:icon="@android:drawable/star_off"
+        android:orderInCategory="100"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+
+
+
+</menu>

@@ -1,6 +1,6 @@
 package com.example.hackro.myapplication.home;
 
-import com.example.hackro.myapplication.models.CollectionsMovies;
+import com.example.hackro.myapplication.models.Collections.CollectionsMovies;
 
 import java.util.List;
 

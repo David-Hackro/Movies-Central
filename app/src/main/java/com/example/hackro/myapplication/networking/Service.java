@@ -2,7 +2,7 @@ package com.example.hackro.myapplication.networking;
 
 
 import com.example.hackro.myapplication.BuildConfig;
-import com.example.hackro.myapplication.models.CollectionsMovies;
+import com.example.hackro.myapplication.models.Collections.CollectionsMovies;
 import com.example.hackro.myapplication.models.Generos.GenerosResponse;
 import com.example.hackro.myapplication.models.Generos.Genre;
 import com.example.hackro.myapplication.models.Movies.ResponseMovies;

@@ -1,4 +1,4 @@
-package com.example.hackro.myapplication.models;
+package com.example.hackro.myapplication.models.Collections;
 
 import com.example.hackro.myapplication.models.Generos.Genre;
 import com.example.hackro.myapplication.models.Movies.ResponseMovies;

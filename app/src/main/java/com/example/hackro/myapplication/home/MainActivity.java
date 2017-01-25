@@ -20,7 +20,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.hackro.myapplication.BuildConfig;
 import com.example.hackro.myapplication.R;
-import com.example.hackro.myapplication.models.CollectionsMovies;
+import com.example.hackro.myapplication.models.Collections.CollectionsMovies;
 import com.example.hackro.myapplication.models.Generos.Genre;
 import com.example.hackro.myapplication.models.Movies.Result;
 import com.example.hackro.myapplication.networking.Service;

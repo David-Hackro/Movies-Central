@@ -211,10 +211,6 @@ public class MainActivity extends BaseApp implements HomeView {
             case R.id.action_order_date:
                 listAdapter.orderDate();
                 return true;
-
-            case R.id.action_order_stars:
-                listAdapter.orderStars();
-                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

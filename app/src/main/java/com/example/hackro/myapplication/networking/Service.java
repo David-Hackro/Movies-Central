@@ -39,7 +39,6 @@ public class Service {
 
 
     public Subscription getMoviesList(final GetMoviesListCallback callback) {
-//.map(UserResoponse::getGenres)
         List<CollectionsMovies> collectionList = new ArrayList<>();
            return makeRequestToServiceGenres()
                 .flatMap(userResponse -> Observable.just(userResponse.getGenres()))

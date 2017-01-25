@@ -3,13 +3,13 @@
 
 [![N|Solid](https://s30.postimg.org/w74sqyyap/logo.png)](https://github.com/David-Hackro/Movies-Central/raw/master/Movies%20Center.apk)
 
-Detalles:
 
+## SDK ##
     compileSdkVersion 25
     buildToolsVersion "25.0.0"
     minSdkVersion 19
     targetSdkVersion 25
-
+### Implementaciones ###
   - MVP
   - Dagger 2
   - RXJava
@@ -51,10 +51,11 @@ API
 ## Orden Alfabeticamente - Fecha ##
 [![N|Solid](http://i.imgur.com/fSRDqnG.gif)]()
 
-
 ## Modo Offline ##
 [![N|Solid]([Imgur](http://i.imgur.com/sBlq8Zu.gif))]()
 
+Descargar APK
+[![N|Solid](https://s30.postimg.org/w74sqyyap/logo.png)](https://github.com/David-Hackro/Movies-Central/raw/master/Movies%20Center.apk)
 
 ## Contacto ##
 hackro91@gmail.com

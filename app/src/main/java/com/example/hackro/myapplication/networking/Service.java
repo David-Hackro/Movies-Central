@@ -14,7 +14,6 @@ import rx.Observable;
 import rx.Subscriber;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Func1;
 import rx.functions.Func2;
 import rx.schedulers.Schedulers;
 
@@ -29,24 +28,24 @@ public class Service {
         this.networkService = networkService;
     }
 
-    private Observable<GenerosResponse> makeRequestToServiceA() {
+    private Observable<GenerosResponse> makeRequestToServiceGenres() {
 
         return  networkService.getAllGeneros("movie","list",BuildConfig.keyService);
     }
 
-    private Observable<ResponseMovies> makeRequestToServiceB(Genre genre) {
+    private Observable<ResponseMovies> makeRequestToServiceMovies(Genre genre) {
         return networkService.getAllMovies(genre.getId(),"movies",BuildConfig.keyService,"created_at.asc");
     }
 
 
-    public Subscription getCityList(final GetCityListCallback callback) {
-
+    public Subscription getMoviesList(final GetMoviesListCallback callback) {
+//.map(UserResoponse::getGenres)
         List<CollectionsMovies> collectionList = new ArrayList<>();
-           return makeRequestToServiceA()
+           return makeRequestToServiceGenres()
                 .flatMap(userResponse -> Observable.just(userResponse.getGenres()))
                 .flatMapIterable(baseDatas -> baseDatas)
                 .flatMap(genre -> {
-                    return makeRequestToServiceB(genre);
+                    return makeRequestToServiceMovies(genre);
                 }, new Func2<Genre, ResponseMovies, CollectionsMovies>() {
 
                     @Override
@@ -76,7 +75,7 @@ public class Service {
     }
 
 
-    public interface GetCityListCallback {
+    public interface GetMoviesListCallback {
         void onSuccess(List<CollectionsMovies> collectionList);
 
         void onError(NetworkError networkError);

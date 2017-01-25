@@ -26,7 +26,7 @@ public class HomePresenter {
     public void getCityList() {
         view.showWait();
 
-        Subscription subscription = service.getCityList(new Service.GetCityListCallback() {
+        Subscription subscription = service.getMoviesList(new Service.GetMoviesListCallback() {
 
             @Override
             public void onSuccess(List<CollectionsMovies> collectionList) {

@@ -4,11 +4,6 @@
     android:layout_height="match_parent">
 
 
-    <ImageView
-        android:id="@+id/backdrop_path"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="fitXY" />
 
 
     <TextView
@@ -24,6 +19,13 @@
         android:textSize="@dimen/font_size_title"
 
         />
+    <ImageView
+        android:id="@+id/backdrop_path"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/imagedefault"
+        android:scaleType="fitXY" />
 
 
     <ScrollView

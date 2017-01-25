@@ -123,6 +123,7 @@ public class MainActivity extends BaseApp implements HomeView {
         Glide.with(dglLoad.getContext())
                 .load(pathImage)
                 .diskCacheStrategy(DiskCacheStrategy.SOURCE)
+                .placeholder(R.mipmap.imagedefault)
                 .skipMemoryCache(true)
                 .into(Backdrop);
         dglLoad.show();

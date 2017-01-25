@@ -31,11 +31,11 @@ public class Service {
 
     private Observable<GenerosResponse> makeRequestToServiceA() {
 
-        return  networkService.getAllGeneros("movie","list",BuildConfig.keyService); //some network call
+        return  networkService.getAllGeneros("movie","list",BuildConfig.keyService);
     }
 
     private Observable<ResponseMovies> makeRequestToServiceB(Genre genre) {
-        return networkService.getAllMovies(genre.getId(),"movies",BuildConfig.keyService,"created_at.asc"); //some network call based on response from ServiceA
+        return networkService.getAllMovies(genre.getId(),"movies",BuildConfig.keyService,"created_at.asc");
     }
 
 
@@ -43,14 +43,10 @@ public class Service {
 
         List<CollectionsMovies> collectionList = new ArrayList<>();
            return makeRequestToServiceA()
-                .flatMap(userResponse -> Observable.just(userResponse.getGenres()))      //get list from response
+                .flatMap(userResponse -> Observable.just(userResponse.getGenres()))
                 .flatMapIterable(baseDatas -> baseDatas)
-                .flatMap(new Func1<Genre, Observable<? extends ResponseMovies>>() {
-
-                    @Override
-                    public Observable<? extends ResponseMovies> call(Genre genre) {
-                        return makeRequestToServiceB(genre);
-                    }
+                .flatMap(genre -> {
+                    return makeRequestToServiceB(genre);
                 }, new Func2<Genre, ResponseMovies, CollectionsMovies>() {
 
                     @Override

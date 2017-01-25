@@ -244,10 +244,12 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements 
 
     @Override
     public void resetFilters() {
-        _listDataHeader.clear();
-        _listDataHeader.addAll(_listDataHeaderFilters);
-        _listDataChild.putAll(_listDataChildFilters);
-        notifyDataSetChanged();
+        if(!_listDataHeader.isEmpty()) {
+            _listDataHeader.clear();
+            _listDataHeader.addAll(_listDataHeaderFilters);
+            _listDataChild.putAll(_listDataChildFilters);
+            notifyDataSetChanged();
+        }
     }
 
 

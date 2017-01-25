@@ -169,11 +169,14 @@ public class MainActivity extends BaseApp implements HomeView {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                if (!newText.trim().isEmpty()) {
-                    listAdapter.resetFilters();
-                    listAdapter.findName(newText);
-                } else
-                    listAdapter.resetFilters();
+                if(listAdapter != null){
+                    if (!newText.trim().isEmpty()) {
+                        listAdapter.resetFilters();
+                        listAdapter.findName(newText);
+                    } else
+                        listAdapter.resetFilters();
+                }
+
                 return false;
             }
         });
@@ -188,11 +191,13 @@ public class MainActivity extends BaseApp implements HomeView {
 
             @Override
             public boolean onQueryTextChange(String newText) {
+                if(listAdapter != null){
                 if (!newText.trim().isEmpty()) {
                     listAdapter.resetFilters();
                     listAdapter.findStars(Utils.converttoDouble(newText));
                 } else
                     listAdapter.resetFilters();
+            }
                 return false;
             }
         });
@@ -202,12 +207,13 @@ public class MainActivity extends BaseApp implements HomeView {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         switch (item.getItemId()) {
             case R.id.action_order_alphabetically:
-                listAdapter.orderAlphabetically();
+                if(listAdapter!=null)listAdapter.orderAlphabetically();
                 return true;
             case R.id.action_order_date:
-                listAdapter.orderDate();
+                if(listAdapter!=null)listAdapter.orderDate();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

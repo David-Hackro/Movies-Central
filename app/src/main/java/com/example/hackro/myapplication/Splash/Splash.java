@@ -28,16 +28,12 @@ public class Splash extends AwesomeSplash {
         configSplash.setRevealFlagX(Flags.REVEAL_RIGHT);
         configSplash.setRevealFlagY(Flags.REVEAL_BOTTOM);
 
-        //Choose LOGO OR PATH; if you don't provide String value for path it's logo by default
-
-        //Customize Logo
-        configSplash.setLogoSplash(R.mipmap.ic_launcher); //or any other drawable
-        configSplash.setAnimLogoSplashDuration(800); //int ms
-        configSplash.setAnimLogoSplashTechnique(Techniques.Bounce); //choose one form Techniques (ref: https://github.com/daimajia/AndroidViewAnimations)
+        configSplash.setLogoSplash(R.mipmap.ic_launcher);
+        configSplash.setAnimLogoSplashDuration(800);
+        configSplash.setAnimLogoSplashTechnique(Techniques.Bounce);
 
 
-        //Customize Path
-        configSplash.setPathSplash(Constants.DROID_LOGO); //set path String
+        configSplash.setPathSplash(Constants.DROID_LOGO);
         configSplash.setOriginalHeight(500);
         configSplash.setOriginalWidth(500);
         configSplash.setAnimPathStrokeDrawingDuration(1500);

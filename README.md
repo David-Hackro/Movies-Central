@@ -53,12 +53,11 @@ API
 
 
 ## Modo Offline ##
-[![N|Solid]([Imgur](http://i.imgur.com/sBlq8Zu.gifv))]()
+[![N|Solid]([Imgur](http://i.imgur.com/sBlq8Zu.gif))]()
 
 
 ## Contacto ##
 hackro91@gmail.com
-[![N|Solid](http://i.imgur.com/sBlq8Zu.gif)]()
 
 License
 ----

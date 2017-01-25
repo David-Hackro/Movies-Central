@@ -1,8 +1,6 @@
 package com.example.hackro.myapplication.networking;
 
 
-import android.util.Log;
-
 import com.example.hackro.myapplication.BuildConfig;
 import com.example.hackro.myapplication.models.CollectionsMovies;
 import com.example.hackro.myapplication.models.Generos.GenerosResponse;

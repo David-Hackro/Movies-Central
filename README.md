@@ -52,7 +52,7 @@ API
 [![N|Solid](http://i.imgur.com/fSRDqnG.gif)]()
 
 ## Modo Offline ##
-[![N|Solid]([Imgur](http://i.imgur.com/sBlq8Zu.gif))]()
+[![N|Solid](http://i.imgur.com/sBlq8Zu.gif)]()
 
 Descargar APK
 [![N|Solid](https://s30.postimg.org/w74sqyyap/logo.png)](https://github.com/David-Hackro/Movies-Central/raw/master/Movies%20Center.apk)

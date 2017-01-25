@@ -11,10 +11,10 @@
     targetSdkVersion 25
 ### Implementaciones ###
   - MVP
-  - Dagger 2
-  - RXJava
-  - Retrofit 2
-  - Retrolambda
+  - [Dagger 2](https://google.github.io/dagger/)
+  - [RXJava](https://github.com/ReactiveX/RxJava)
+  - [Retrofit 2](https://square.github.io/retrofit/)
+  - [Retrolambda](https://github.com/orfjackal/retrolambda)
 
 
 ### Ordenamiento ###

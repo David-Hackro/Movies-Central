@@ -7,7 +7,14 @@
     <string name="action.filter.name">Filtrar por Nombre</string>
     <string name="action.filter.stars">Filtrar por Estrellas</string>
 
-    <string name="action_search_title">find title</string>
-    <string name="action_search_stars">find stars</string>
+    <string name="action_search_title">Find title</string>
+    <string name="action_search_stars">Find stars</string>
+
+    <string name="lbl_release_date">Release Date</string>
+    <string name="lbl_popularity">Popularity</string>
+    <string name="lbl_vote_count">Vote Count</string>
+    <string name="lbl_vote_average">Vote Average</string>
+    <string name="lbl_overvie">Overvie</string>
+
 
 </resources>

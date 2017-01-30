@@ -24,7 +24,7 @@ public class Splash extends AwesomeSplash {
         getSupportActionBar().hide();
 
         configSplash.setBackgroundColor(R.color.colorAccent);
-        configSplash.setAnimCircularRevealDuration(2000);
+        configSplash.setAnimCircularRevealDuration(0);
         configSplash.setRevealFlagX(Flags.REVEAL_RIGHT);
         configSplash.setRevealFlagY(Flags.REVEAL_BOTTOM);
 

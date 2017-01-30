@@ -59,6 +59,7 @@ public class MainActivity extends BaseApp implements HomeView {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        overridePendingTransition(R.anim.trans_left_in,R.anim.trans_left_out);
 
         expListView = (ExpandableListView) findViewById(R.id.lvExp);
         progressBar = (ProgressBar) findViewById(R.id.progress);

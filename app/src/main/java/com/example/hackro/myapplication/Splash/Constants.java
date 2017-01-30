@@ -6,22 +6,7 @@ package com.example.hackro.myapplication.Splash;
 
 public class Constants {
 
-    public static final int SPLASH_DELAY = 5000;
-    public static final String EMPTY = "";
 
-    public static final String STREATWEAR_FONT = "fonts/streatwear.otf";
-    public static final String DITI_SWEET_FONT = "fonts/diti_sweet.ttf";
-    public static final String GERMANIA_ONE_FONT = "fonts/germania_one.ttf";
-    public static final String SLIMJIM_FONT = "fonts/slimjim.ttf";
-    public static final String VOLATIRE_FONT = "fonts/volatire.ttf";
-
-    public static final String[] FONTS = {EMPTY, STREATWEAR_FONT, DITI_SWEET_FONT, GERMANIA_ONE_FONT, SLIMJIM_FONT, VOLATIRE_FONT};
-
-    //flags
-    public static final String FOR_WHAT = "forWhat";
-    public static final int FOR_LOGO = 0;
-    public static final int FOR_TEXT = 1;
-    public static final String CONFIG = "config";
 
     //path
     public static final String DROID_LOGO = "M 325.00,7.45\n" +

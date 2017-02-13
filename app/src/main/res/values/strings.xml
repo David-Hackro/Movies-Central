@@ -1,20 +1,19 @@
 <resources>
-    <string name="app_name">Movies Central</string>
+  <string name="app_name">Movies Central</string>
 
-    <string name="action.order.alphabetically">Sort Alphabetically</string>
-    +    <string name="action.order.date">Sort Date</string>
-    +    <string name="action.order.stars">Sort Stars</string>
-    +    <string name="action.filter.name">Filter Name</string>
-    +    <string name="action.filter.stars">Filter  Stars</string>
-
-    <string name="action_search_title">Find title</string>
-    <string name="action_search_stars">Find stars</string>
-
-    <string name="lbl_release_date">Release Date</string>
-    <string name="lbl_popularity">Popularity</string>
-    <string name="lbl_vote_count">Vote Count</string>
-    <string name="lbl_vote_average">Vote Average</string>
-    <string name="lbl_overvie">Overvie</string>
-
+  <string name="action.order.alphabetically">Sort Alphabetically</string>
+  <string name="action.order.date">Sort Date</string>
+  <string name="action.order.stars">Sort Stars</string>
+  <string name="action.filter.name">Filter Name</string>
+  <string name="action.filter.stars">Filter Stars</string>
+  <string name="action_search_title">Find title</string>
+  <string name="action_search_stars">Find stars</string>
+  <string name="lbl_release_date">Release Date</string>
+  <string name="lbl_popularity">Popularity</string>
+  <string name="lbl_vote_count">Vote Count</string>
+  <string name="lbl_vote_average">Vote Average</string>
+  <string name="lbl_overview">Overview</string>
+  <string name="movies_default_error">Impossible to get the movies, try again!</string>
+  <string name="movies_network_error">There is a problem with yur connectivity, please try again!</string>
 
 </resources>

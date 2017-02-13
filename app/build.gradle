@@ -3,56 +3,54 @@ apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'me.tatarka.retrolambda'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.0"
+  compileSdkVersion 25
+  buildToolsVersion "25.0.0"
 
-    defaultConfig {
-        applicationId "com.example.hackro.myapplication"
-        minSdkVersion 19
-        targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
+  defaultConfig {
+    applicationId "com.hackro.central.movies"
+    minSdkVersion 19
+    targetSdkVersion 25
+    versionCode 1
+    versionName "1.0"
 
-        buildConfigField "String", "Imagepath", "\"http://image.tmdb.org/t/p/w300\""
-        buildConfigField "int", "LIMIT", "100"
-        buildConfigField "String", "BASEURL", "\"https://api.themoviedb.org/3/genre/\""
-        buildConfigField "int", "CACHETIME", "432000"
-        buildConfigField "String", "keyService", "\"da0d692f7f62a1dc687580f79dc1e6a0\""
+    buildConfigField "String", "IMAGE_PATH", "\"http://image.tmdb.org/t/p/w300\""
+    buildConfigField "int", "LIMIT", "100"
+    buildConfigField "String", "BASE_URL", "\"https://api.themoviedb.org/3/genre/\""
+    buildConfigField "int", "CACHE_TIME", "432000"
+    buildConfigField "String", "KEY_SERVICE", "\"da0d692f7f62a1dc687580f79dc1e6a0\""
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
+  }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile appcompatDependencies.appcompat
-    compile appcompatDependencies.design
+  compile fileTree(dir: 'libs', include: ['*.jar'])
+  testCompile 'junit:junit:4.12'
+  compile appcompatDependencies.appcompat
+  compile appcompatDependencies.design
 
-    compile glideDependencies.glide
+  compile glideDependencies.glide
 
-    compile googleDependecies.gson
-    compile retrofitDependencies.retrofit
-    compile retrofitDependencies.adapter
-    compile retrofitDependencies.converter
-    compile retrofitDependencies.scalars
+  compile googleDependecies.gson
+  compile retrofitDependencies.retrofit
+  compile retrofitDependencies.adapter
+  compile retrofitDependencies.converter
+  compile retrofitDependencies.scalars
 
-    compile  rxandroidDependencies.rxandroid
-    compile rxjavaDependencies.rxJava
-    compile othersDependencies.awesomeasplash
+  compile rxandroidDependencies.rxandroid
+  compile rxjavaDependencies.rxJava
+  compile othersDependencies.awesomeasplash
 
-    apt 'com.google.dagger:dagger-compiler:2.2'
-    compile daggerDependencies.dagger
-    provided 'javax.annotation:jsr250-api:1.0'
-    provided 'org.glassfish:javax.annotation:10.0-b28'
-
+  apt 'com.google.dagger:dagger-compiler:2.2'
+  compile daggerDependencies.dagger
+  provided 'javax.annotation:jsr250-api:1.0'
+  provided 'org.glassfish:javax.annotation:10.0-b28'
 }

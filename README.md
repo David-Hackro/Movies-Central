@@ -3,6 +3,7 @@
 
 [![N|Solid](https://s30.postimg.org/w74sqyyap/logo.png)](https://github.com/David-Hackro/MoviesView-Central/raw/master/MoviesView%20Center.apk)
 
+** STATE** :   Creation the persistence of data using DB
 
 ## SDK ##
     compileSdkVersion 25

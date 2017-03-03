@@ -57,7 +57,7 @@ ext{
     awesomeasplash : "com.github.ViksaaSkool:AwesomeSplash:v1.0.0"
     ]
 
-    daggerVersion = '2.2'
+    daggerVersion = '2.9'
     daggerDependencies = [
             dagger   : "com.google.dagger:dagger:${daggerVersion}"
     ]

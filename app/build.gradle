@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'me.tatarka.retrolambda'
 
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.0"
@@ -53,11 +54,13 @@ dependencies {
     compile othersDependencies.awesomeasplash
 
 
-    //compile butterknifeDependencies.butterknife
-    //apt 'com.jakewharton:butterknife-compiler:8.2.1'
+    compile butterknifeDependencies.butterknife
+    apt 'com.jakewharton:butterknife-compiler:8.2.1'
 
-    apt 'com.google.dagger:dagger-compiler:2.2'
     compile daggerDependencies.dagger
     provided 'javax.annotation:jsr250-api:1.0'
     provided 'org.glassfish:javax.annotation:10.0-b28'
+
+    apt 'com.google.dagger:dagger-compiler:2.9'
+
 }

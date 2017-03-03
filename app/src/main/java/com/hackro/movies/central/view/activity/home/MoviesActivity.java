@@ -17,11 +17,15 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import butterknife.BindView;
+
 public class MoviesActivity extends BaseActivity implements MoviesPresenter.View {
 
-    private ProgressBar progressBar;
+    @BindView(R.id.loading)
+    ProgressBar progressBar;
+    @BindView(R.id.lvExp)
+    ExpandableListView moviesView;
     private MoviesAdapter adapter;
-    private ExpandableListView moviesView;
     private MovieDetail detail;
 
     @Inject
@@ -40,8 +44,6 @@ public class MoviesActivity extends BaseActivity implements MoviesPresenter.View
     }
 
     private void initializeView() {
-        progressBar = (ProgressBar) findViewById(R.id.loading);
-        moviesView = (ExpandableListView) findViewById(R.id.lvExp);
         detail = new MovieDetail(this);
     }
 

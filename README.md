@@ -10,7 +10,9 @@
     minSdkVersion 19
     targetSdkVersion 25
 ### Implementaciones ###
+  - Clean Architecture
   - MVP
+  - Pattern Repository
   - [Dagger 2](https://google.github.io/dagger/)
   - [RXJava](https://github.com/ReactiveX/RxJava)
   - [Retrofit 2](https://square.github.io/retrofit/)

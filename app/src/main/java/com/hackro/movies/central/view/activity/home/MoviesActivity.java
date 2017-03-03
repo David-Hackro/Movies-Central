@@ -10,6 +10,7 @@ import com.hackro.movies.central.R;
 import com.hackro.movies.central.view.BaseActivity;
 import com.hackro.movies.central.view.adapter.MoviesAdapter;
 import com.hackro.movies.central.view.model.MoviesView;
+import com.hackro.movies.central.view.model.Result;
 import com.hackro.movies.central.view.presenter.MoviesPresenter;
 
 import java.util.List;
@@ -21,6 +22,7 @@ public class MoviesActivity extends BaseActivity implements MoviesPresenter.View
     private ProgressBar progressBar;
     private MoviesAdapter adapter;
     private ExpandableListView moviesView;
+    private MovieDetail detail;
 
     @Inject
     MoviesPresenter presenter;
@@ -29,12 +31,18 @@ public class MoviesActivity extends BaseActivity implements MoviesPresenter.View
     @Override
     public void initView() {
         super.initView();
-        progressBar = (ProgressBar) findViewById(R.id.loading);
-        moviesView = (ExpandableListView) findViewById(R.id.lvExp);
+
+        initializeView();
         initializeDagger();
         initializePresenter();
         presenter.initialize();
 
+    }
+
+    private void initializeView() {
+        progressBar = (ProgressBar) findViewById(R.id.loading);
+        moviesView = (ExpandableListView) findViewById(R.id.lvExp);
+        detail = new MovieDetail(this);
     }
 
 
@@ -46,10 +54,16 @@ public class MoviesActivity extends BaseActivity implements MoviesPresenter.View
 
     @Override
     public void showMovies(List<MoviesView> moviesViewList) {
-        adapter = new MoviesAdapter(this,moviesViewList);
-
+        adapter = new MoviesAdapter(this, moviesViewList);
         moviesView.setAdapter(adapter);
 
+
+        moviesView.setOnChildClickListener(
+                (expandableListView, view, groupPosition, childPosition, listener) -> {
+                    Result movie = (Result) adapter.getChild(groupPosition, childPosition);
+                    detail.showDetail(movie);
+                    return false;
+                });
     }
 
     @Override
@@ -68,7 +82,6 @@ public class MoviesActivity extends BaseActivity implements MoviesPresenter.View
     }
 
 
-
     private void initializeDagger() {
         MovieApplication app = (MovieApplication) getApplication();
         app.getAppComponent().inject(this);
@@ -78,8 +91,8 @@ public class MoviesActivity extends BaseActivity implements MoviesPresenter.View
         presenter.setView(this);
     }
 
-
-    @Override protected void onDestroy() {
+    @Override
+    protected void onDestroy() {
         super.onDestroy();
         presenter.destroy();
     }

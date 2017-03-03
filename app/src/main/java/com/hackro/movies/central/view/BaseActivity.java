@@ -17,7 +17,10 @@ public abstract class  BaseActivity extends AppCompatActivity{
     }
 
     public void initView() {
-
     }
     protected abstract int getLayoutId();
+
+
+    public void bindView(){
+    }
 }

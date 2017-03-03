@@ -9,7 +9,7 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
 import com.hackro.movies.central.R;
-import com.hackro.movies.central.data.local.model.Result;
+import com.hackro.movies.central.view.model.Result;
 import com.hackro.movies.central.view.model.MoviesView;
 
 import java.util.List;

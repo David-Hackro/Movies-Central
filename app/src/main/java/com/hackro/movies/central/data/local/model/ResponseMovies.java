@@ -1,12 +1,14 @@
 package com.hackro.movies.central.data.local.model;
 
+import com.hackro.movies.central.view.model.Result;
+
 import java.util.List;
 
 public class ResponseMovies {
 
   private int id;
   private int page;
-  private List<Result> results = null;
+  private List<com.hackro.movies.central.view.model.Result> results = null;
   private int totalPages;
   private int totalResults;
 

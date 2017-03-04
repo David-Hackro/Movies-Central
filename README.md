@@ -60,6 +60,10 @@ API
 Descargar APK
 [![N|Solid](https://s30.postimg.org/w74sqyyap/logo.png)](https://github.com/David-Hackro/MoviesPresentation-Central/raw/master/MoviesPresentation%20Center.apk)
 
+    Referencias
+ - https://github.com/erikcaffrey/Clean-Architecture-Android
+ - https://github.com/LadwaAditya/OfflineFirstReactiveApp-Tutorial
+ - https://github.com/android10/Android-CleanArchitecture
 
 ![N|Solid](http://cebronx.org/wp-content/uploads/2015/10/en-construccion_banner-608x227.jpg)
 

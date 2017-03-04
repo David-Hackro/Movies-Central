@@ -24,8 +24,10 @@ class MovieDetail {
   private TextView txt_overview;
   private RatingBar bar_vote_average;
   private ImageView Backdrop;
+  private final int divideValoration = 2;
 
-  MovieDetail(Context context) {
+  MovieDetail(Context  context) {
+
     dialogView = new Dialog(context, R.style.Theme_Dialog_Translucent);
     dialogView.requestWindowFeature(Window.FEATURE_NO_TITLE);
     dialogView.setContentView(R.layout.movie_detail_dialog);
@@ -44,7 +46,7 @@ class MovieDetail {
     txt_popularity.setText(String.valueOf(result.getPopularity()));
     txt_vote_count.setText(String.valueOf(result.getVoteCount()));
     txt_overview.setText(result.getOverview());
-    bar_vote_average.setRating(Float.valueOf(String.valueOf(result.getVoteAverage() / 2)));
+    bar_vote_average.setRating(Float.valueOf(String.valueOf(result.getVoteAverage() / divideValoration)));
     String pathImage = BuildConfig.IMAGE_PATH + result.getPosterPath();
 
     Glide.with(dialogView.getContext())

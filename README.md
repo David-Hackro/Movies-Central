@@ -1,7 +1,7 @@
 
-# MoviesView Center
+# MoviesPresentation Center
 
-[![N|Solid](https://s30.postimg.org/w74sqyyap/logo.png)](https://github.com/David-Hackro/MoviesView-Central/raw/master/MoviesView%20Center.apk)
+[![N|Solid](https://s30.postimg.org/w74sqyyap/logo.png)](https://github.com/David-Hackro/MoviesPresentation-Central/raw/master/MoviesPresentation%20Center.apk)
 
 ** STATE** :   Creation the persistence of data using DB
 
@@ -58,7 +58,7 @@ API
 [![N|Solid](http://i.imgur.com/sBlq8Zu.gif)]()
 
 Descargar APK
-[![N|Solid](https://s30.postimg.org/w74sqyyap/logo.png)](https://github.com/David-Hackro/MoviesView-Central/raw/master/MoviesView%20Center.apk)
+[![N|Solid](https://s30.postimg.org/w74sqyyap/logo.png)](https://github.com/David-Hackro/MoviesPresentation-Central/raw/master/MoviesPresentation%20Center.apk)
 
 
 ![N|Solid](http://cebronx.org/wp-content/uploads/2015/10/en-construccion_banner-608x227.jpg)

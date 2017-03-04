@@ -8,7 +8,7 @@ public class ResponseMovies {
 
   private int id;
   private int page;
-  private List<com.hackro.movies.central.view.model.Result> results = null;
+  private List<Result> results = null;
   private int totalPages;
   private int totalResults;
 

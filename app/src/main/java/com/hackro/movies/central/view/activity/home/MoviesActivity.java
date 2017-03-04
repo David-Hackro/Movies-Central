@@ -8,12 +8,12 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.hackro.movies.central.MovieApplication;
-import com.hackro.movies.central.R;
 import com.hackro.movies.central.view.BaseActivity;
 import com.hackro.movies.central.view.adapter.MoviesAdapter;
-import com.hackro.movies.central.view.model.MoviesView;
+import com.hackro.movies.central.view.model.MoviesPresentation;
 import com.hackro.movies.central.view.model.Result;
 import com.hackro.movies.central.view.presenter.MoviesPresenter;
+import com.hackro.moviesDomain.central.R;
 
 import java.util.List;
 
@@ -37,29 +37,24 @@ public class MoviesActivity extends BaseActivity implements MoviesPresenter.View
     @Override
     public void initView() {
         super.initView();
-
         initializeView();
         initializeDagger();
         initializePresenter();
         presenter.initialize();
-
-
     }
 
     private void initializeView() {
         detail = new MovieDetail(this);
     }
 
-
     @Override
     protected int getLayoutId() {
         return R.layout.movies_activity;
     }
 
-
     @Override
-    public void showMovies(List<MoviesView> moviesViewList) {
-        adapter = new MoviesAdapter(this, moviesViewList);
+    public void showMovies(List<MoviesPresentation> moviesPresentationList) {
+        adapter = new MoviesAdapter(this, moviesPresentationList);
         moviesView.setAdapter(adapter);
 
         moviesView.setOnChildClickListener(
@@ -81,10 +76,7 @@ public class MoviesActivity extends BaseActivity implements MoviesPresenter.View
     }
 
     @Override
-    public void showError(String message) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
-    }
-
+    public void showError(String message) { Toast.makeText(this, message, Toast.LENGTH_SHORT).show();}
 
     private void initializeDagger() {
         MovieApplication app = (MovieApplication) getApplication();

@@ -2,9 +2,9 @@ package com.hackro.movies.central.data.remote;
 
 import android.support.annotation.NonNull;
 
-import com.hackro.movies.central.BuildConfig;
 import com.hackro.movies.central.data.local.model.CollectionsMovies;
 import com.hackro.movies.central.data.repository.DataSource;
+import com.hackro.moviesDomain.central.BuildConfig;
 
 import java.util.List;
 

@@ -9,8 +9,9 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.hackro.movies.central.BuildConfig;
-import com.hackro.movies.central.R;
+import com.hackro.movies.central.view.model.Result;
+import com.hackro.moviesDomain.central.BuildConfig;
+import com.hackro.moviesDomain.central.R;
 
 
 class MovieDetail {
@@ -37,7 +38,7 @@ class MovieDetail {
     Backdrop = (ImageView) dialogView.findViewById(R.id.backdrop_path);
   }
 
-  void showDetail(com.hackro.movies.central.view.model.Result result) {
+  void showDetail(Result result) {
     title.setText(result.getTitle());
     txt_release_date.setText(result.getReleaseDate());
     txt_popularity.setText(String.valueOf(result.getPopularity()));

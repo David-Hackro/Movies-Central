@@ -7,8 +7,8 @@ import android.preference.PreferenceManager;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.hackro.movies.central.BuildConfig;
 import com.hackro.movies.central.data.remote.AppRemoteData;
+import com.hackro.moviesDomain.central.BuildConfig;
 
 import javax.inject.Singleton;
 

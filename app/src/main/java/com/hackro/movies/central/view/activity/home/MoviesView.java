@@ -1,6 +1,8 @@
 package com.hackro.movies.central.view.activity.home;
 
 
+import com.hackro.movies.central.view.model.MoviesPresentation;
+
 import java.util.List;
 
 interface MoviesView {
@@ -11,5 +13,5 @@ interface MoviesView {
 
   void showFailureMessage(Throwable error);
 
-  void showMoviesView(List<com.hackro.movies.central.view.model.MoviesView> MoviesView);
+  void showMoviesView(List<MoviesPresentation> MoviesPresentation);
 }

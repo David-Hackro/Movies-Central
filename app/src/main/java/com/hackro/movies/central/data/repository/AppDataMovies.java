@@ -1,7 +1,7 @@
 package com.hackro.movies.central.data.repository;
 
 
-import com.hackro.movies.central.domain.model.Movies;
+import com.hackro.movies.central.domain.model.MoviesDomain;
 
 import java.util.List;
 
@@ -12,6 +12,6 @@ import rx.Observable;
  */
 public interface AppDataMovies {
 
-    Observable<List<Movies>> getMovies();
+    Observable<List<MoviesDomain>> getMovies();
     
 }

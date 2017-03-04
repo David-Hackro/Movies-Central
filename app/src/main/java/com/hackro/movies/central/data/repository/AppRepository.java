@@ -3,7 +3,7 @@ package com.hackro.movies.central.data.repository;
 import android.support.annotation.NonNull;
 
 import com.hackro.movies.central.data.remote.AppRemoteData;
-import com.hackro.movies.central.domain.model.Movies;
+import com.hackro.movies.central.domain.model.MoviesDomain;
 
 import java.util.List;
 
@@ -28,9 +28,10 @@ public class AppRepository implements AppDataMovies{
 
 
     @Override
-    public Observable<List<Movies>> getMovies() {
+    public Observable<List<MoviesDomain>> getMovies() {
 
-        return remoteData.getMovies().map(collectionsMovies -> mapper.reverseMap(collectionsMovies));
+        return remoteData.getMovies().map(collectionsMovies ->
+                mapper.reverseMap(collectionsMovies));
             //this line is if you need implement persistence of data using db
         /*Observable.concat(remoteData.getMovies(),remoteData.getMovies())
                 .first(collectionsMovies -> collectionsMovies != null);*/

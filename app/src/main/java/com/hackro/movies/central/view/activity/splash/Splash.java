@@ -3,8 +3,8 @@ package com.hackro.movies.central.view.activity.splash;
 import android.content.Intent;
 
 import com.daimajia.androidanimations.library.Techniques;
-import com.hackro.movies.central.R;
 import com.hackro.movies.central.view.activity.home.MoviesActivity;
+import com.hackro.moviesDomain.central.R;
 import com.viksaa.sssplash.lib.activity.AwesomeSplash;
 import com.viksaa.sssplash.lib.cnst.Flags;
 import com.viksaa.sssplash.lib.model.ConfigSplash;

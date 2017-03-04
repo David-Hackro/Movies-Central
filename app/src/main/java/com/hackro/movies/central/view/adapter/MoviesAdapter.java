@@ -1,7 +1,9 @@
 package com.hackro.movies.central.view.adapter;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.Typeface;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,15 +11,19 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
 import com.hackro.movies.central.R;
-import com.hackro.movies.central.view.model.Result;
 import com.hackro.movies.central.view.model.MoviesView;
+import com.hackro.movies.central.view.model.Result;
+import com.hackro.movies.central.view.utils.StringUtils;
 
+import java.util.Collections;
 import java.util.List;
+
+import rx.Observable;
 
 /**
  * Created by hackro on 3/03/17.
  */
-public class MoviesAdapter extends BaseExpandableListAdapter {
+public class MoviesAdapter extends BaseExpandableListAdapter implements MoviesAdapterFilter {
 
 
     private Context context;
@@ -33,6 +39,7 @@ public class MoviesAdapter extends BaseExpandableListAdapter {
     @Override
     public Object getChild(int groupPosition, int childPosition) {
         return moviesViews.get(groupPosition).getMovies().getResults().get(childPosition);
+
     }
 
     @Override
@@ -107,4 +114,27 @@ public class MoviesAdapter extends BaseExpandableListAdapter {
     public boolean isChildSelectable(int groupPosition, int childPosition) {
         return true;
     }
+
+    @TargetApi(Build.VERSION_CODES.N)
+    @Override
+    public void orderAlphabetically() {
+        Observable.from(moviesViews)
+                .subscribe(moviesView -> Collections.sort(moviesView .getMovies().getResults(),(result, t1) -> result.getTitle().compareTo(t1.getTitle())));
+        notifyDataSetChanged();
+    }
+
+    @Override
+    public void orderDate() {
+        Observable.from(moviesViews)
+                .subscribe(moviesView -> Collections.sort(moviesView .getMovies().getResults(),(result, t1) -> StringUtils.toDate(result.getReleaseDate()).compareTo(StringUtils.toDate(t1.getReleaseDate()))));
+        notifyDataSetChanged();
+    }
+
+    @Override
+    public void orderStars() {
+        Observable.from(moviesViews)
+                .subscribe(moviesView -> Collections.sort(moviesView .getMovies().getResults(),(result, t1) -> Double.valueOf(result.getVoteAverage()).compareTo(t1.getVoteAverage())));
+        notifyDataSetChanged();
+    }
+
 }

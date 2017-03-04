@@ -27,4 +27,5 @@ public abstract class  BaseActivity extends AppCompatActivity{
     public void bindView(){
         ButterKnife.bind(this);
     }
+
 }

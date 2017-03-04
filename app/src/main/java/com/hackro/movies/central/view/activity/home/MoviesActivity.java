@@ -1,5 +1,7 @@
 package com.hackro.movies.central.view.activity.home;
 
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.ProgressBar;
@@ -41,6 +43,7 @@ public class MoviesActivity extends BaseActivity implements MoviesPresenter.View
         initializePresenter();
         presenter.initialize();
 
+
     }
 
     private void initializeView() {
@@ -58,7 +61,6 @@ public class MoviesActivity extends BaseActivity implements MoviesPresenter.View
     public void showMovies(List<MoviesView> moviesViewList) {
         adapter = new MoviesAdapter(this, moviesViewList);
         moviesView.setAdapter(adapter);
-
 
         moviesView.setOnChildClickListener(
                 (expandableListView, view, groupPosition, childPosition, listener) -> {
@@ -99,4 +101,27 @@ public class MoviesActivity extends BaseActivity implements MoviesPresenter.View
         presenter.destroy();
     }
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.movies_menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+            switch (item.getItemId()) {
+                case R.id.action_order_alphabetically:
+                    adapter.orderAlphabetically();
+                    return true;
+                case R.id.action_order_date:
+                    if (adapter!= null) adapter.orderDate();
+                    return true;
+                case R.id.action_order_stars:
+                    if (adapter!= null) adapter.orderStars();
+                    return true;
+                default:
+                    return super.onOptionsItemSelected(item);
+            }
+    }
 }

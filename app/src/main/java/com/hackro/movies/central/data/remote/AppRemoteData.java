@@ -16,14 +16,12 @@ import rx.Observable;
 /**
  * Created by hackro on 27/02/17.
  */
-public class AppRemoteData  implements DataSource {
-
+public class AppRemoteData implements DataSource {
 
     private Retrofit retrofit;
 
     @Inject
     public AppRemoteData(@NonNull Retrofit retrofit) {
-
         this.retrofit = retrofit;
     }
 
@@ -33,11 +31,7 @@ public class AppRemoteData  implements DataSource {
                 .getAllGenres("movie", "list", BuildConfig.KEY_SERVICE)
                 .flatMap(userResponse -> Observable.just(userResponse.getGenres()))
                 .flatMapIterable(genres -> genres)
-                .flatMap(
-                        genre -> {
-                            return retrofit.create(MoviesService.class).getAllMovies(genre.getId(), "movies", BuildConfig.KEY_SERVICE,
-                                    "created_at.asc");
-                        }, CollectionsMovies::new)
+                .flatMap(genre -> {return retrofit.create(MoviesService.class).getAllMovies(genre.getId(), "movies", BuildConfig.KEY_SERVICE,"created_at.asc");                        }, CollectionsMovies::new)
                 .toList();
     }
 }
